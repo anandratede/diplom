@@ -26,7 +26,7 @@ export default function Login() {
     ) {
       const currentUser = email === adminCredentials.email ? adminCredentials : workerCredentials;
       localStorage.setItem('currentUser', JSON.stringify(currentUser));
-      router.push(currentUser.role === 'admin' ? '/dashboard' : '/worker');
+      router.push(currentUser.role === 'admin' ? '/' : '/worker');
     } else {
       alert('Invalid credentials');
     }
@@ -42,11 +42,11 @@ export default function Login() {
   return (
     <div className={styles.container}>
       <div className={styles['login-box']}>
-        <h1 className={styles.loginTitle}>Login</h1>
+        <h1 className={styles.loginTitle}>Нэвтрэх</h1>
         {/* Email Input */}
         <input
           type="email"
-          placeholder="Email"
+          placeholder="И-мэйл"
           className={styles.input}
           value={email}
           onChange={(e) => setEmail(e.target.value)}
@@ -55,7 +55,7 @@ export default function Login() {
         {/* Password Input */}
         <input
           type="password"
-          placeholder="Password"
+          placeholder="Нууц үг"
           className={styles.input}
           value={password}
           onChange={(e) => setPassword(e.target.value)}
@@ -63,7 +63,7 @@ export default function Login() {
         />
         {/* Login Button */}
         <button className={styles.button} onClick={handleLogin}>
-          Login
+          Нэвтрэх
         </button>
       </div>
     </div>
