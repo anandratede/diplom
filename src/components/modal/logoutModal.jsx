@@ -10,6 +10,7 @@ const LogoutModal = ({open, setOpen}) => {
 
     const handleLogout = () => {
         setOpen(false);
+        localStorage.removeItem('token')
         setTimeout(() => {
           router.push('/login');
         }, 300); 
