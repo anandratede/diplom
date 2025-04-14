@@ -1,3 +1,5 @@
+'use client'
+
 import Navbar from "./navbar";
 import LogoutModal from "./modal/logoutModal";
 import { useState } from "react";
@@ -8,7 +10,7 @@ const DashboardLayout = ({ children, setActiveComponent, activeComponent }) => {
     <>
       <Navbar />
       <div className="flex h-screen w-full bg-gray-100">
-        <div className="flex flex-col h-[650px] justify-between w-1/5 p-3 m-3 text-[13px] rounded-lg bg-white h-full overflow-auto">
+        <div className="flex flex-col h-[650px] justify-between w-1/5 p-3 m-3 text-[13px] rounded-lg bg-white overflow-auto">
           <div className="flex flex-col w-full p-6 gap-2">
             <button
               onClick={() => setActiveComponent("monitor")}
